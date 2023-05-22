@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         if(users.size() == 0)
             binding.tvStatus.setText(getString(R.string.no_data));
 
-        UserAdapter adapter = new UserAdapter(users);
+        UserAdapter adapter = new UserAdapter(users, db);
         binding.rvUsers.setLayoutManager(new LinearLayoutManager(this));
         binding.rvUsers.setAdapter(adapter);
 

@@ -4,13 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.latihanroom.databinding.ActivityAddUserBinding;
-import com.example.latihanroom.databinding.ActivityMainBinding;
 
 public class AddUserActivity extends AppCompatActivity {
     private ActivityAddUserBinding binding;

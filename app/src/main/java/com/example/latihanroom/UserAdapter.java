@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     private ArrayList<User> localDataSet;
-//    private AppDatabase db;
+    private AppDatabase db;
 
     /**
      * Initialize the dataset of the Adapter
@@ -25,9 +25,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
      * @param dataSet String[] containing the data to populate views to be used
      * by RecyclerView
      */
-    public UserAdapter(ArrayList<User> dataSet) {
+    public UserAdapter(ArrayList<User> dataSet, AppDatabase db) {
         localDataSet = dataSet;
-//        this.db = db;
+        this.db = db;
     }
 
     // Create new views (invoked by the layout manager)
@@ -79,7 +79,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                 notifyItemRemoved(viewHolder.getAdapterPosition());
 
 
-//                db.userDao().delete(user);
+                db.userDao().delete(user);
             }
         });
     }
